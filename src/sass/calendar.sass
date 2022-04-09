@@ -1,0 +1,113 @@
+html
+    background: #FAFAFA
+
+#calendar
+    max-width: 800px
+    margin: 30px auto
+
+.air-datepicker
+    width: 100%
+    background: #fff
+    border-radius: 10px
+
+    &--content
+        padding: 0
+        background: #FAFAFA
+        border-radius: 0 0 10px 10px
+
+    &--navigation
+        margin-bottom: 35px
+
+    &-body
+        margin: 20px
+
+        &--day-name
+            font-weight: 500
+            color: #000
+
+            &.-weekend-
+                color: #BCBCBC
+
+        &--cells.-days-
+            grid-auto-rows: 80px
+
+
+    &-cell
+        flex-direction: column
+        align-items: flex-start
+        justify-content: flex-start
+        gap: 2px
+        margin: 1px
+        font-weight: 500
+        padding: 5px
+        font-size: 14px
+        line-height: 17px
+        background: #fff !important
+        color: #000
+        border: 1px solid #FAFAFA
+        transition: border-color ease .3s, color ease .3s, background ease .3s
+        max-width: 105px
+        z-index: auto
+
+        &.-selected-,
+        &.-focus-
+            color: inherit !important
+            background: inherit !important
+            border: 1px solid #DBDBDB
+
+        &.past-day
+            background: #F5F5F5 !important
+
+        &.-weekend-
+            color: #B6BBE3 !important
+
+        &.-current-
+            color: #9DD5A8 !important
+            border: 1px solid #DBDBDB
+
+    &-nav
+        justify-content: flex-start
+        border-bottom: none
+        padding: 20px 20px 0
+
+        &--title
+            pointer-events: none
+            font-weight: 500
+            color: #5E6196
+            text-transform: uppercase
+
+        &--action
+            path
+                stroke: #5E6196
+
+    &--navigation
+        margin-bottom: 20px
+
+.calendar-day
+    align-self: flex-end
+
+.calendar-event
+    font-size: 12px
+    padding: 4px
+    border-radius: 5px
+    white-space: nowrap
+    overflow: hidden
+    text-overflow: ellipsis
+    width: 85px
+    min-width: calc(100% - 8px)
+
+    &:hover
+        width: max-content
+        z-index: 1
+
+    &--green
+        background: #E6F5EB
+        color: #A8C9AD
+
+    &--red
+        background: #FCECED
+        color: #D68F99
+
+    &--orange
+        background: #F9ECD8
+        color: #E1B988
